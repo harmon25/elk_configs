@@ -1,0 +1,1 @@
+Mar 12 03:23:49 SecOnion-SPR600 snort: [1:2100498:8] GPL ATTACK_RESPONSE id check returned root [Classification: Potentially Bad Traffic] [Priority: 2]: {TCP} 82.165.177.154:80 -> 192.168.0.132:30401
