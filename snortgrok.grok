@@ -5,3 +5,5 @@ SNORT_SIMPLE %{DATA:signature};%{IP:ip_src};(?:%{POSINT:port_src}|\N);
  DATE_ENG %{YEAR}[./-]%{MONTHNUM}[./-]%{MONTHDAY}
  
 TIMESTAMP %{DATE_ENG} %{TIME}
+
+SNORT %{SYSLOGTIMESTAMP:timestamp} %{SYSLOGHOST:logsource} snort: \[%{NUMBER:snort_pid}\:%{NUMBER:gid}\:%{NUMBER:sid}\] %{GREEDYDATA:alert_msg}\[Classification\: %{DATA:ids_classification}\] \[Priority: %{NUMBER:priority}\]: \{%{WORD:proto}} %{IP:src_ip}:%{INT:src_port} -> %{IP:dst_ip}:%{INT:dst_port}
